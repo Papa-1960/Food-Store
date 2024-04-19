@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place an Order</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script src="validation.js"></script>
+</head>
+<body background="image/bg.jpg">
+    <header>
+        <h1>Place an Order</h1>
+<nav>
+    <ul>
+        <li><a href="index.html" class="menu-link">Home</a></li>
+        <li><a href="registration.html" class="menu-link">Register</a></li>
+        <li><a href="order.html" class="menu-link">Place an Order</a></li>
+        <li><a href="features.html" class="menu-link">Features</a></li>
+    </ul>
+</nav>
+
+    </header>
+
+    <main>
+        <section>
+            <h2>Order Form</h2>
+            <!-- Add a <div> for error messages with the ID "order-errors" -->
+            <div id="order-errors" class="error"></div>
+            <form id="order-form" action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" method="POST">
+                <label>Delivery or Pick-up:</label>
+                <input type="radio" id="delivery" name="delivery" value="delivery"> <label for="delivery">Delivery</label>
+                <input type="radio" id="pickup" name="delivery" value="pickup"> <label for="pickup">Pick-up</label>
+                
+                <label for="delivery-address">Delivery Address:</label>
+                <textarea id="delivery-address" name="delivery-address"></textarea>
+                
+                <label for="billing-address">Billing Address:</label>
+                <textarea id="billing-address" name="billing-address" required></textarea>
+                
+                <label for="contact-number">Contact Number:</label>
+                <input type="text" id="contact-number" name="contact-number" required>
+                
+                <label for="email">Email for Receipt:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label>Payment Method:</label>
+                <label for="same-as-delivery">Same as Delivery Address:</label>
+                <input type="checkbox" id="same-as-delivery" name="same-as-delivery">
+
+                <select name="payment-method">
+                    <option value="pay-pickup">Pay on Pick-up</option>
+                    <option value="pay-online">Pay Online</option>
+                </select>
+                
+                <label for="credit-card">Credit Card Information:</label>
+                <input type="text" id="credit-card" name="credit-card">
+                <label for="credit-card-type">Select Credit Card Type:</label>
+                <select id="credit-card-type" name="credit-card-type">
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="amex">American Express</option>
+                </select>
+
+                <label for="credit-card-number">Credit Card Number:</label>
+                <input type="text" id="credit-card-number" name="credit-card-number" required>
+
+                <input type="submit" value="Place Order">
+                <input type="reset" value="Reset">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Our Store</p>
+    </footer>
+</body>
+</html>
